@@ -179,7 +179,7 @@ html(lang='en')
         section.page-section.bg-dark.text-white
             .container.px-4.px-lg-5.text-center
                 h2.mb-4 Contact me!
-                a.btn.btn-light.btn-xl(href='https://')
+                a.btn.btn-light.btn-xl(href='mailto://site@ticfab.com')
                     i.bi-phone.fs-2.mb-3.text-muted Call TicFab
 
         // Contact
@@ -203,7 +203,7 @@ html(lang='en')
                         // https://startbootstrap.com/solution/contact-forms
                         // to get an API token!
 
-                        form#contactForm(data-sb-form-api-token='API_TOKEN')
+                        form(action="https://docs.google.com/forms/d/1I8DmimlGdf7SbXnwbSR0tibOlHyUR93BZ6OTjw1eePs/prefill", method='POST')
 
                             // Name input
                             .form-floating.mb-3
@@ -260,9 +260,6 @@ html(lang='en')
                             #submitSuccessMessage.d-none
                                 .text-center.mb-3
                                     .fw-bolder Form submission successful!
-                                    | To activate this form, sign up at
-                                    br
-                                    a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
 
                             // Submit error message
                             //
