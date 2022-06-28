@@ -1,0 +1,299 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title TicFab
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        // Bootstrap Icons
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic', rel='stylesheet', type='text/css')
+
+        // SimpleLightbox plugin CSS
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css', rel='stylesheet')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
+            .container.px-4.px-lg-5
+                a.navbar-brand(href='#page-top') TicFab
+                p.text-black-50 Formerly
+                    a.text-black-50(href="https://nfcsi.com") nfcsi.com
+                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto.my-2.my-lg-0
+                        li.nav-item
+                            a.nav-link(href='#about') A propos
+                        li.nav-item
+                            a.nav-link(href='#technos') Technologies
+                        li.nav-item
+                            a.nav-link(href='#contact') Contact
+                        li.nav-item
+                            a.nav-link(href='https://nfcsi.com') Formerly nfcsi.com
+
+        // Masthead
+        header.masthead
+            .container.px-4.px-lg-5.h-100
+                .row.gx-4.gx-lg-5.h-100.align-items-center.justify-content-center.text-center
+                    .col-lg-8.align-self-end
+                        h1.text-white.font-weight-bold Fullstack
+                        h1.text-white.font-weight-bold Design to Run
+                        hr.divider
+                    .col-lg-8.align-self-baseline
+                        p.text-white-75.mb-5
+                            | Conception d'architectures techniques, développement et implémentation en agile devops sur l’ensemble des techniques du SI : compute, data, réseau, application, sécurité
+                        a.btn.btn-primary.btn-xl(href='#about') Détails
+
+        // About
+        section#about.page-section.bg-primary
+            .container.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center
+                        h2.text-white.mt-0 Tic,
+                        h4.text-black-50.mt-0 Technologies de l'Information et de la Communication
+                        h2.text-white.mt-0 Fab,
+                        h4.text-black-50.mt-0 Fabric, un fin tissage industriel entre les composants
+                        hr.divider.divider-light
+                        h2.text-white.mt-0 22 ans d'expérience
+                        hr.divider.divider-light
+                        p.text-black-50.mb-4
+                            | Annuaires, Archi 3-tiers, Architecture technique, Automation, Bigdata, Cloud, CI/CD, Containers, Continuité, Datacenter, Data Engineering, Deep learning, Devops, Etude, Evolution du SI, Firewall, Gestion CMDB, Gestion de projet, Infrastructure, Innovation, Langages scripting, Méthodologies, Ordonnanceur, Outillage de production, PRA/PCA, Réseaux, Résilience, Sécurité, Système d’Information, SGBD, Virtualisation
+                        hr.divider
+                        a.btn.btn-light.btn-xl(href='#technos') Technologies
+
+        // Services
+        section#technos.page-section
+            .container.px-4.px-lg-5
+                h2.text-center.mt-0 Technologies
+                hr.divider
+                .row.gx-4.gx-lg-5
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-cloud-check.fs-1.text-primary
+                            h3.h4.mb-2 Cloud
+                            p.text-muted.mb-0 Openstack, GCP, AWS, Azure, VMware VRAO
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-box.fs-1.text-primary
+                            h3.h4.mb-2 Virtualisation
+                            p.text-muted.mb-0 KVM, VMware, Docker, Kubernetes, Swarm, Nutanix, Mesos, Openshift
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-diagram-3.fs-1.text-primary
+                            h3.h4.mb-2 Firewalling
+                            p.text-muted.mb-0 Pfsense, Paloalto, Fortinet, ASA,  Checkpoint
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-shield-check.fs-1.text-primary
+                            h3.h4.mb-2 Security
+                            p.text-muted.mb-0 modsecurity WAF, AD, ldap, keycloak, Kerberos, radius
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-hdd-network.fs-1.text-primary
+                            h3.h4.mb-2 Networking
+                            p.text-muted.mb-0 Haproxy, F5 ADC/GTM, Bind, kong, apache2, nginx, NAS netapp, samba
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-display.fs-1.text-primary
+                            h3.h4.mb-2 Monitoring
+                            p.text-muted.mb-0 Grafana, Prometheus, influxdb, mqtt, chronograf, centreon, mrtg, solarwinds
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-archive.fs-1.text-primary
+                            h3.h4.mb-2 Databases
+                            p.text-muted.mb-0 mysql, postgresql, neo4j, consul, mongodb, orientdb, Gremlin, oracle
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-calculator.fs-1.text-primary
+                            h3.h4.mb-2 Data
+                            p.text-muted.mb-0 Hadoop, elasticsearch, Tensorflow, Anaconda, R
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-arrows-move.fs-1.text-primary
+                            h3.h4.mb-2 Message brokers
+                            p.text-muted.mb-0 mqtt, Kafka, Rabbitmq
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-skip-backward-circle.fs-1.text-primary
+                            h3.h4.mb-2 Ops tools
+                            p.text-muted.mb-0 Jenkins, ansible, terraform, Rundeck, Saltstack, Debian, RedHat, circleci, puppet
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-bezier2.fs-1.text-primary
+                            h3.h4.mb-2 Dev tools
+                            p.text-muted.mb-0 git, github, jira, confluence, bitbucket, nexus, portus
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-code-slash.fs-1.text-primary
+                            h3.h4.mb-2 Coding languages
+                            p.text-muted.mb-0 Python, shell, Go, php, javascript, Perl, Groovy, PowerShell, R, C++, Matlab
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-stack.fs-1.text-primary
+                            h3.h4.mb-2 Dev frameworks
+                            p.text-muted.mb-0 Flask, Swagger openapi, Django, Platformio, scipy
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-cpu.fs-1.text-primary
+                            h3.h4.mb-2 Appliances
+                            p.text-muted.mb-0 Cisco UCS, Cisco Nexus 2k3k5k, EMC vnx, vplex
+                    .col-lg-3.col-md-6.text-center
+                        .mt-5
+                            .mb-2
+                                i.bi-columns-gap.fs-1.text-primary
+                            h3.h4.mb-2 IDE
+                            p.text-muted.mb-0 Jetbrains IDEs, ms code, sublime
+
+
+        // Call to action
+        section.page-section.bg-dark.text-white
+            .container.px-4.px-lg-5.text-center
+                h2.mb-4 Contact me!
+                a.btn.btn-light.btn-xl(href='https://')
+                    i.bi-phone.fs-2.mb-3.text-muted Call TicFab
+
+        // Contact
+        section#contact.page-section
+            .container.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.col-xl-6.text-center
+                        h2.mt-0 Text me
+                        hr.divider
+                        p.text-muted.mb-5
+                            | Pour toute information
+                .row.gx-4.gx-lg-5.justify-content-center.mb-5
+                    .col-lg-6
+
+                        // * * * * * * * * * * * * * * *
+                        // * * SB Forms Contact Form * *
+                        // * * * * * * * * * * * * * * *
+
+                        // This form is pre-integrated with SB Forms.
+                        // To make this form functional, sign up at
+                        // https://startbootstrap.com/solution/contact-forms
+                        // to get an API token!
+
+                        form#contactForm(data-sb-form-api-token='API_TOKEN')
+
+                            // Name input
+                            .form-floating.mb-3
+                                input#name.form-control(
+                                    type='text',
+                                    placeholder='Enter your name...',
+                                    data-sb-validations='required'
+                                )
+                                label(for='name') Full name
+                                .invalid-feedback(data-sb-feedback='name:required')
+                                    | A name is required.
+
+                            // Email address input
+                            .form-floating.mb-3
+                                input#email.form-control(
+                                    type='email',
+                                    placeholder='name@example.com',
+                                    data-sb-validations='required,email'
+                                )
+                                label(for='email') Email address
+                                .invalid-feedback(data-sb-feedback='email:required')
+                                    | An email is required.
+                                .invalid-feedback(data-sb-feedback='email:email')
+                                    | Email is not valid.
+
+                            // Phone number input
+                            .form-floating.mb-3
+                                input#phone.form-control(
+                                    type='tel',
+                                    placeholder='(123) 456-7890',
+                                    data-sb-validations='required'
+                                )
+                                label(for='phone') Phone number
+                                .invalid-feedback(data-sb-feedback='phone:required')
+                                    | A phone number is required.
+
+                            // Message input
+                            .form-floating.mb-3
+                                textarea#message.form-control(
+                                    type='text',
+                                    placeholder='Enter your message here...',
+                                    style='height: 10rem;',
+                                    data-sb-validations='required'
+                                )
+                                label(for='message') Message
+                                .invalid-feedback(data-sb-feedback='message:required')
+                                    | A message is required.
+
+                            // Submit success message
+                            //
+                            // This is what your users will see when the form
+                            // has successfully submitted
+
+                            #submitSuccessMessage.d-none
+                                .text-center.mb-3
+                                    .fw-bolder Form submission successful!
+                                    | To activate this form, sign up at
+                                    br
+                                    a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+
+                            // Submit error message
+                            //
+                            // This is what your users will see when there is
+                            // an error submitting the form
+
+                            #submitErrorMessage.d-none
+                                .text-center.text-danger.mb-3 Error sending message!
+
+                            // Submit Button
+                            .d-grid
+                                button#submitButton.btn.btn-primary.btn-xl.disabled(type='submit') Submit
+
+        // Footer
+        footer.bg-light.py-5
+            .container.px-4.px-lg-5
+                .small.text-center.text-muted
+                    | Copyright &copy; 2022 - TicFab
+
+        // Bootstrap core JS
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js')
+
+        // SimpleLightbox plugin JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
+
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        // * *                               SB Forms JS                               * *
+        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
