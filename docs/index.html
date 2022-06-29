@@ -213,7 +213,8 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form action="https://script.google.com/macros/s/AKfycbx216dY5wRkuRBQ4k7UXzhRFFZ1hHEzNgR9r8VYKputPx7X_Zx4jmuOiQsRvNS32LH4WA/exec" method="POST">
+                        <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}"></iframe>
+                        <form action="https://script.google.com/macros/s/AKfycbx216dY5wRkuRBQ4k7UXzhRFFZ1hHEzNgR9r8VYKputPx7X_Zx4jmuOiQsRvNS32LH4WA/exec" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
