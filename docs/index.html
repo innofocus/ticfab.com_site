@@ -206,15 +206,27 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}"></iframe>
-                        <form action="https://script.google.com/macros/s/AKfycbx216dY5wRkuRBQ4k7UXzhRFFZ1hHEzNgR9r8VYKputPx7X_Zx4jmuOiQsRvNS32LH4WA/exec" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+                        <!-- jquery-->
+                        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+                        <script>
+                            $(document).ready(function () {
+                                $('#mail').submit(function (event) {
+                                    var dataString = $(this).serialize();
+                                    event.preventDefault();
+
+                                    $.ajax({
+                                        type: 'POST',
+                                        url: 'https://script.google.com/macros/s/AKfycbx216dY5wRkuRBQ4k7UXzhRFFZ1hHEzNgR9r8VYKputPx7X_Zx4jmuOiQsRvNS32LH4WA/exec',
+                                        data: dataString,
+                                        success: function () {
+                                            $('#submitSuccessMessage').html('<h2>Message envoyé.</h2>').append('<p>A bientôt!</p>');
+                                        },
+                                    });
+                                });
+                            });
+                        </script>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
+                        <form name="mail" id="mail" target="hidden_iframe">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -244,8 +256,8 @@
                             <!---->
                             <!-- This is what your users will see when the form-->
                             <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3"><div class="fw-bolder">Form submission successful!</div></div>
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder"><div id="submitSuccessMessage"></div></div>
                             </div>
                             <!-- Submit error message-->
                             <!---->

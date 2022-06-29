@@ -194,20 +194,33 @@ html(lang='en')
                 .row.gx-4.gx-lg-5.justify-content-center.mb-5
                     .col-lg-6
 
-                        // * * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
+                        // jquery
+                        script(src='https://code.jquery.com/jquery-1.10.2.js')
+                        script.
+                            $(document).ready(function ( ) {
+                                $("#mail").submit(function (event) {
+                                    var dataString = $(this).serialize();
+                                    event.preventDefault();
 
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-
-                        form(action="https://docs.google.com/forms/d/1I8DmimlGdf7SbXnwbSR0tibOlHyUR93BZ6OTjw1eePs/prefill", method='POST')
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "https://script.google.com/macros/s/AKfycbx216dY5wRkuRBQ4k7UXzhRFFZ1hHEzNgR9r8VYKputPx7X_Zx4jmuOiQsRvNS32LH4WA/exec",
+                                        data: dataString,
+                                        success: function () {
+                                            $("#submitSuccessMessage")
+                                                .html("<h2>Message envoyé.</h2>")
+                                                .append("<p>A bientôt!</p>")
+                                        }
+                                    });
+                                });
+                            })
+                        iframe(name="hidden_iframe" id="hidden_iframe" style="display: none")
+                        form(name="mail" id="mail" target="hidden_iframe")
 
                             // Name input
                             .form-floating.mb-3
                                 input#name.form-control(
+                                    name='name',
                                     type='text',
                                     placeholder='Enter your name...',
                                     data-sb-validations='required'
@@ -219,6 +232,7 @@ html(lang='en')
                             // Email address input
                             .form-floating.mb-3
                                 input#email.form-control(
+                                    name='email',
                                     type='email',
                                     placeholder='name@example.com',
                                     data-sb-validations='required,email'
@@ -232,6 +246,7 @@ html(lang='en')
                             // Phone number input
                             .form-floating.mb-3
                                 input#phone.form-control(
+                                    name='phone',
                                     type='tel',
                                     placeholder='(123) 456-7890',
                                     data-sb-validations='required'
@@ -243,6 +258,7 @@ html(lang='en')
                             // Message input
                             .form-floating.mb-3
                                 textarea#message.form-control(
+                                    name='message',
                                     type='text',
                                     placeholder='Enter your message here...',
                                     style='height: 10rem;',
@@ -257,9 +273,9 @@ html(lang='en')
                             // This is what your users will see when the form
                             // has successfully submitted
 
-                            #submitSuccessMessage.d-none
-                                .text-center.mb-3
-                                    .fw-bolder Form submission successful!
+                            .text-center.mb-3
+                                .fw-bolder
+                                    #submitSuccessMessage
 
                             // Submit error message
                             //
@@ -271,7 +287,7 @@ html(lang='en')
 
                             // Submit Button
                             .d-grid
-                                button#submitButton.btn.btn-primary.btn-xl.disabled(type='submit') Submit
+                                button#submitButton.btn.btn-primary.btn-xl(type='submit') Submit
 
         // Footer
         footer.bg-light.py-5
